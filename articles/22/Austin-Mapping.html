@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mapping Black Austin</title>
+  <meta name="description" content="Since May 2021, I have been working with Dr. Edmund T. Gordon in the Office of Campus Contextualizationand Commemoration. In this role, I have taken historic...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="/portfolio//css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/portfolio//css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/portfolio//articles/22/Austin-Mapping">
+
+  <link rel="alternate" type="application/rss+xml" title="Amy Shreeve's Portfolio" href="/portfolio//feed.xml" />
+
+  <link rel="shortcut icon" type="image/png" 
+      href="/portfolio/favicon.png">
+
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/portfolio//"><img class="badge" src="/portfolio//assets/img/badge_1.png" alt="CH"></a>
+	
+		
+		    
+		      <a href="/portfolio//contact">Contact</a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/portfolio//">blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/portfolio//about/">About</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/portfolio//css/print.css"></a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/portfolio//resume">Resume</a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/portfolio//sitemap.xml"></a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/portfolio//robots.txt"></a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+      <h1>Mapping Black Austin</h1>
+<p class="subtitle">August 29, 2022</p>
+
+<p>Since May 2021, I have been working with Dr. Edmund T. Gordon in the Office of Campus Contextualization
+and Commemoration. In this role, I have taken historic Census records and used the recorded addresses
+to create demographic maps of my hometown, Austin, Texas.</p>
+
+<!--more-->
+
+<h2 id="project-background">Project Background</h2>
+
+<p>Thought I joined this project a little over a year ago, it actually began in 2018. Initially, Dr. Gordon
+and another research assistant were investigating Wheatville, a historic freedperson’s community in the
+West Campus area. That research assistant created a series of maps (spanning from 1880-1940) depicting
+that area.</p>
+
+<p>When I was brought on in 2021, I developed a program that sped up data collection from three weeks to just
+one hour. This made it much easier to map a larger area. I began mapping the East Campus area, which included
+a historically Black community known as ‘Felman Heights.’ After completing the maps of this area, I expanded
+my focus to the entire City of Austin.</p>
+
+<p>In December of 2021, this project gained three more research assistants. I trained this people in the mapping
+methodology. Together, we completed a map of the city of Austin for the year 1920 in June 2022. We were meant 
+to present our findings to the Austin City Council, but scheduling issues forced us to simply submit documents
+instead. Just last week (August 2022), we completed a demographic map of Austin for the year 1930.</p>
+
+<figure><img src="/portfolio//assets/img/1920Map.png" /><figcaption class="maincolumn-figure">1920 Demographic Map</figcaption></figure>
+
+<figure><img src="/portfolio//assets/img/1930Map.png" /><figcaption class="maincolumn-figure">1930 Demographic Map</figcaption></figure>
+
+<p>Here are the interactive, online versions of these maps: <a href="&quot;https://www.arcgis.com/apps/mapviewer/index.html?webmap=3c91e15ad5b34c528a1896519f02383c&quot;">1920</a> 
+<a href="&quot;https://www.arcgis.com/apps/mapviewer/index.html?webmap=1b0852d72b704cc3bba99716159952ca&quot;">1930</a></p>
+
+<h2 id="methodology">Methodology</h2>
+
+<p>I developed a Python script that collects historic Census data and makes it into an Excel file. After the data
+is converted to this easily editable format, researchers go line by line, checking addresses and names for errors.
+We use historic data from city directories to corroborate our changes. After correcting addresses and names, we use
+ArcGIS Pro to ‘geocode’ addresses (make them into plottable points). We place one point for each family. Each point 
+has a color indicating the race of the head of the family.</p>
+
+<p>This work is done one Census tract at a time. Every tract is unique. Different Census years have different problems 
+and challenges. This research project combines innovative digital techiques, like Python and ArcGIS, with traditional 
+humanities techniques, like archival research. This mapping project’s unique methodology allows researchers to learn 
+new skills and gain a better understanding of historic Austin.</p>
+
+<h2 id="goals">Goals</h2>
+
+<p>The purpose of this project is to create a tool for researchers that want to learn more about the demographic history 
+of Austin. Because the map shows the recorded race of city residents, it can help researchers to identify historic 
+neighborhoods. As more maps are created, researchers can see demographic change over time in these neighborhoods. 
+The maps can help us to understand the influence that institutions like UT Austin and the City Council had on Black 
+neighborhoods in Austin.</p>
+
+<p>This project is an outgrowth of a UT Commemoration initiative, so it also aims to commemorate historic neighborhoods 
+and communities near the University of Texas. Demographic maps of the West Campus area, for example, can help us to see 
+how fraternity life and student housing displaced Black residents of that area. This effort can help to educate students 
+about where they live and what happened here before.</p>
+
+<h2 id="future-plans">Future Plans</h2>
+
+<p>Now that the 1920 &amp; 1930 maps are complete, there is still plenty of work to be done on the 1880, 1900, 1910, and 1940 maps. 
+(The 1890 Census records were destroyed in a fire, and the 1950 Census records have only just been released. The former no 
+longer exists, and the latter has yet to be transcribed.)</p>
+
+<p>In addition to the creation of future maps, this project now has a sister project seeking to map the values of land owned 
+by Black residents of Austin in 1920. This project is lead by Dr. Richard Heyman at UT Austin. He and a team of researchers 
+have calculated the value of property owned by Black residents, and I have created maps displaying this information.</p>
+
+<p>I intend to continue working on this project until I graduate in May of 2023.</p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>This project has been extremely educational for me. When I began this role, I had a budding role in the digital humanities. 
+Working with Dr. Gordon has given me opportunities to put my Python skills to work, and I have also learned how to work with 
+ArcGIS Pro and other GIS software. I have learned how to use historical records as data and how to ask historical questions.</p>
+
+<p>I have also had the opportunity to lead a team of skilled researchers. This experience has given me a number of skills. First, 
+I had to learn to create training materials. I created a series of training videos and a long, text-based guide to help new 
+researchers learn the skills necessary to work on this project. I have learned to delegate responsibilities to different team 
+members, and I have learned to create systems to allow people to know who is working on what.</p>
+
+<p>Working on “Mapping Black Austin” has given me hard and soft skills, and I am grateful for the immense support I have received 
+from Dr. Gordon and his team in this role.</p>
+
+
+
+    </article>
+    <span class="print-footer">Mapping Black Austin - August 29, 2022 - Amy Shreeve</span>
+    <footer>
+  <hr class="slender">
+<div class="credits">
+<span>&copy; 2022 &nbsp;&nbsp;AMY SHREEVE</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for Digital Humanities Research </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+  </body>
+</html>

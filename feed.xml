@@ -1,31 +1,499 @@
----
-layout: null
-nav_exclude: true
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Amy Shreeve's Portfolio</title>
+    <description>A student portfolio</description>
+    <link>/portfolio//</link>
+    <atom:link href="/portfolio//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 29 Aug 2022 20:38:16 +0000</pubDate>
+    <lastBuildDate>Mon, 29 Aug 2022 20:38:16 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Mapping Black Austin</title>
+        <description>&lt;p&gt;Since May 2021, I have been working with Dr. Edmund T. Gordon in the Office of Campus Contextualization
+and Commemoration. In this role, I have taken historic Census records and used the recorded addresses
+to create demographic maps of my hometown, Austin, Texas.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;project-background&quot;&gt;Project Background&lt;/h2&gt;
+
+&lt;p&gt;Thought I joined this project a little over a year ago, it actually began in 2018. Initially, Dr. Gordon
+and another research assistant were investigating Wheatville, a historic freedperson’s community in the
+West Campus area. That research assistant created a series of maps (spanning from 1880-1940) depicting
+that area.&lt;/p&gt;
+
+&lt;p&gt;When I was brought on in 2021, I developed a program that sped up data collection from three weeks to just
+one hour. This made it much easier to map a larger area. I began mapping the East Campus area, which included
+a historically Black community known as ‘Felman Heights.’ After completing the maps of this area, I expanded
+my focus to the entire City of Austin.&lt;/p&gt;
+
+&lt;p&gt;In December of 2021, this project gained three more research assistants. I trained this people in the mapping
+methodology. Together, we completed a map of the city of Austin for the year 1920 in June 2022. We were meant 
+to present our findings to the Austin City Council, but scheduling issues forced us to simply submit documents
+instead. Just last week (August 2022), we completed a demographic map of Austin for the year 1930.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/1920Map.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;1920 Demographic Map&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/1930Map.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;1930 Demographic Map&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here are the interactive, online versions of these maps: &lt;a href=&quot;&amp;quot;https://www.arcgis.com/apps/mapviewer/index.html?webmap=3c91e15ad5b34c528a1896519f02383c&amp;quot;&quot;&gt;1920&lt;/a&gt; 
+&lt;a href=&quot;&amp;quot;https://www.arcgis.com/apps/mapviewer/index.html?webmap=1b0852d72b704cc3bba99716159952ca&amp;quot;&quot;&gt;1930&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;methodology&quot;&gt;Methodology&lt;/h2&gt;
+
+&lt;p&gt;I developed a Python script that collects historic Census data and makes it into an Excel file. After the data
+is converted to this easily editable format, researchers go line by line, checking addresses and names for errors.
+We use historic data from city directories to corroborate our changes. After correcting addresses and names, we use
+ArcGIS Pro to ‘geocode’ addresses (make them into plottable points). We place one point for each family. Each point 
+has a color indicating the race of the head of the family.&lt;/p&gt;
+
+&lt;p&gt;This work is done one Census tract at a time. Every tract is unique. Different Census years have different problems 
+and challenges. This research project combines innovative digital techiques, like Python and ArcGIS, with traditional 
+humanities techniques, like archival research. This mapping project’s unique methodology allows researchers to learn 
+new skills and gain a better understanding of historic Austin.&lt;/p&gt;
+
+&lt;h2 id=&quot;goals&quot;&gt;Goals&lt;/h2&gt;
+
+&lt;p&gt;The purpose of this project is to create a tool for researchers that want to learn more about the demographic history 
+of Austin. Because the map shows the recorded race of city residents, it can help researchers to identify historic 
+neighborhoods. As more maps are created, researchers can see demographic change over time in these neighborhoods. 
+The maps can help us to understand the influence that institutions like UT Austin and the City Council had on Black 
+neighborhoods in Austin.&lt;/p&gt;
+
+&lt;p&gt;This project is an outgrowth of a UT Commemoration initiative, so it also aims to commemorate historic neighborhoods 
+and communities near the University of Texas. Demographic maps of the West Campus area, for example, can help us to see 
+how fraternity life and student housing displaced Black residents of that area. This effort can help to educate students 
+about where they live and what happened here before.&lt;/p&gt;
+
+&lt;h2 id=&quot;future-plans&quot;&gt;Future Plans&lt;/h2&gt;
+
+&lt;p&gt;Now that the 1920 &amp;amp; 1930 maps are complete, there is still plenty of work to be done on the 1880, 1900, 1910, and 1940 maps. 
+(The 1890 Census records were destroyed in a fire, and the 1950 Census records have only just been released. The former no 
+longer exists, and the latter has yet to be transcribed.)&lt;/p&gt;
+
+&lt;p&gt;In addition to the creation of future maps, this project now has a sister project seeking to map the values of land owned 
+by Black residents of Austin in 1920. This project is lead by Dr. Richard Heyman at UT Austin. He and a team of researchers 
+have calculated the value of property owned by Black residents, and I have created maps displaying this information.&lt;/p&gt;
+
+&lt;p&gt;I intend to continue working on this project until I graduate in May of 2023.&lt;/p&gt;
+
+&lt;h2 id=&quot;reflection&quot;&gt;Reflection&lt;/h2&gt;
+
+&lt;p&gt;This project has been extremely educational for me. When I began this role, I had a budding role in the digital humanities. 
+Working with Dr. Gordon has given me opportunities to put my Python skills to work, and I have also learned how to work with 
+ArcGIS Pro and other GIS software. I have learned how to use historical records as data and how to ask historical questions.&lt;/p&gt;
+
+&lt;p&gt;I have also had the opportunity to lead a team of skilled researchers. This experience has given me a number of skills. First, 
+I had to learn to create training materials. I created a series of training videos and a long, text-based guide to help new 
+researchers learn the skills necessary to work on this project. I have learned to delegate responsibilities to different team 
+members, and I have learned to create systems to allow people to know who is working on what.&lt;/p&gt;
+
+&lt;p&gt;Working on “Mapping Black Austin” has given me hard and soft skills, and I am grateful for the immense support I have received 
+from Dr. Gordon and his team in this role.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 29 Aug 2022 03:30:00 +0000</pubDate>
+        <link>/portfolio//articles/22/Austin-Mapping</link>
+        <guid isPermaLink="true">/portfolio//articles/22/Austin-Mapping</guid>
+        
+        
+        <category>post</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Fictional and Non-fictional Latin American Imaginations</title>
+        <description>&lt;p&gt;This is a project for HIS 363E: Mapping Latin America at UT Austin. In this course, we have spent the semester analyzing various historical maps of the geographic area referred to as ‘Latin America.’
+This project seeks to understand my own perception of Latin America through the fiction and non-fiction works I’ve read concerning the area. I am doing this by creating maps of the works
+I have read that concern Latin America and the Latinx Identity. On these maps, I am shading in countries where I have read something concerning the nation.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;parameters&quot;&gt;Parameters&lt;/h2&gt;
+
+&lt;p&gt;I divded the works I’ve read into two groups: fiction and non-fiction. In reality, the line between these two categories isn’t always clear. For my purposes, I included poetry and lyrical prose 
+in the fiction category.&lt;br /&gt;
+What constitutes a reading or book in this project? I am excluding texts read in HIS 363E because I feel like this wouldn’t provide a fair reflection of my reading tastes and literary blindspots.
+I am including poetry books, magazine articles (specifically substantive articles from the National Geographic magazine), and books.&lt;br /&gt;
+I used a standard map of South and Central America, extending all the way up to the United States. As Jose Moya notes in “Latin America: The Limitations and Meaning of a Historical Category,”
+the concept of Latin America is not a real geographic area. Rather, it is a series of cultural ideas about identity and politics in the United States. I included the Southern United states because I
+believe that the literary tradition of this area is contiguous with many Latin American literary traditions.&lt;br /&gt;
+I affiliated books with countries for one of two reasons. First, if the author was from the region, I included the work even if it did not necessarily describe events in the nation. 
+This set of circumstances applies to things like the poetry of Pablo Neruda. Second, I included works in a nation if they were set there, even if the author was not from there. This
+applies to most of the nonfiction materials. Some materials, like “One Hundred Years of Solitude,” fit into both categories.&lt;br /&gt;
+These maps presented me with some unique and difficult problems. Some materials were transnational or concerned borderlands. Others focuses on rather local events and it felt
+strange to apply that work to an entire area.&lt;br /&gt;
+This project presented particular issues with the differences between fiction and non-fiction, national borders, and Latinx identity.&lt;/p&gt;
+
+&lt;h2 id=&quot;outcome&quot;&gt;Outcome&lt;/h2&gt;
+
+&lt;p&gt;Here is the fiction map:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/LatinAmericaBookMap.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Fiction map&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This map has significant blank spots in central America; no nation between Mexico and Colombia is represented.
+This map is also blank in the Guiana shield and in several South American countries.&lt;/p&gt;
+
+&lt;p&gt;Here is the non-fiction map:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/NonFiction.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Non-fiction map&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This map also has some blank spots in central America. Unlike the other map, this map has absences in Argentina
+and Chile.&lt;/p&gt;
+
+&lt;h2 id=&quot;analysis&quot;&gt;Analysis&lt;/h2&gt;
+
+&lt;p&gt;This project helped me to reveal blind spots in both my fiction and non-fiction reading.
+It serves as a to-read list. It is also telling what places are absent from the imagination of Latin America.
+Central American nations may often be left out of fictional stories associated with Latin America that are commonly read by people in the United States.&lt;/p&gt;
+
+&lt;p&gt;This project also helped me to understand broader trends in Latin American writing. Many fictional stories were hyper-local and
+did not describe an entire nation. Non-fiction writings were often transnational as they described climactic or environmental issues.
+Participating in such a project demonstrates what places people imagine to be a) Latin American and b) worth hearing about.
+While a list might serve a similar purpose, creating a map of what you’ve read helps you to visualize particular regions that
+may have been ignored, rather than discrete countries.&lt;/p&gt;
+
+&lt;h2 id=&quot;replication&quot;&gt;Replication&lt;/h2&gt;
+
+&lt;p&gt;If you are interesting in creating such a map to reveal blank spots in your reading habits, here are the instructions.&lt;/p&gt;
+
+&lt;p&gt;I used a software called GIMP. You can find information about how to download GIMP &lt;a href=&quot;https://www.gimp.org/downloads/&quot;&gt;here&lt;/a&gt;.&lt;br /&gt;
+After downloading GIMP, save images of the map and the book covers that you’d like to populate in the national borders.
+I used &lt;a href=&quot;https://www.youtube.com/watch?v=6ONHF1xs_1c&quot;&gt;this&lt;/a&gt; tutorial to learn how to use the fuzzy select tool. This tutorial uses
+a United States map and family photos. Substitute the map for a map of Latin America and substitute the family photos for
+book covers.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 May 2022 09:06:05 +0000</pubDate>
+        <link>/portfolio//articles/22/Latin-America</link>
+        <guid isPermaLink="true">/portfolio//articles/22/Latin-America</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+      <item>
+        <title>Austin Historical Snapchat Filters</title>
+        <description>&lt;p&gt;As Austin, Texas rapidly expands, there are many new residents that have little knowledge of the city’s rich history. 
+I created a series of Snapchat filters that transform Austin into a museum. This will help to educate the general public about Austin’s history, especially as it pertains to gentrification.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;logicintentions&quot;&gt;Logic/intentions&lt;/h2&gt;
+
+&lt;p&gt;Full disclosure: I created this as my final project for HIS365G: The History of Museums, which is taught by Dr. Steven Mintz. We were asked to design a museum, but I wanted to take the museum outside.&lt;br /&gt;
+My goal was to allow people to publicly engage with the history of their town. I especially wanted to focus on Black history in Austin because, time and time again, Black communities in Austin have been displaced and disrupted.&lt;/p&gt;
+
+&lt;h2 id=&quot;methodology&quot;&gt;Methodology&lt;/h2&gt;
+
+&lt;p&gt;I began by searching the &lt;a href=&quot;https://texashistory.unt.edu/&quot;&gt;Portal to Texas History&lt;/a&gt; for photographs that represented the Black community in Austin. I was especially interested in groups and gathering spaces.
+I collected nearly thirty photos, but I could only use photos that had an identifiable location. This meant that I had to pare my collection down to ten.&lt;/p&gt;
+
+&lt;p&gt;Next, I used the Snapchat Lens studio program. This program allowed me to create Snapchat filters out of my collected photos. I put each photo in a picture frame so that viewers could see them the same way they would in a gallery.&lt;/p&gt;
+
+&lt;p&gt;Each Snapchat filter is accessible through an individualized QR code. In the future, I plan on printing these out on stickers and sticking the QR codes at the locations where the pictures were originally taken. The filter
+would allow people to see how the location they are standing in used to look.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/Snapcodes.jpg&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Collection of all produced QR codes&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;Let’s take a look at one specific filter. The original picture for this is of the Anderson HS Class of 1889, as seen below:&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/anderson.jpg&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Anderson Class of 1889&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then, I used Lens Studio to 1) create the filter and 2) produce the QR code.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/anderson_code.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Anderson HS Snapchat Filter&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To use this filter, one would open the Snapchat app and scan the QR code. This would then open up the image, and it would look a bit like the following.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/snapcode_use.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Example of a phone screen when the QR code is open&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The background on this “phone” shows how the location where the picture was taken looks now. In the future, I want to paste this QR code here (near what is now Kealing Middle school). Curious passersby will see the location, then and now.&lt;/p&gt;
+
+&lt;h2 id=&quot;reflections&quot;&gt;Reflections&lt;/h2&gt;
+
+&lt;p&gt;Really, I want people to stop in their walks to the bus stop, to the coffee shop, to wherever they’re going and think: what used to be here? Who used to be here?&lt;br /&gt;
+Hopefully, this filter allows people to see that 130 years ago, there were different people here. Hopefully, people will begin to wonder: where did they go?&lt;br /&gt;
+Geography is rarely an accident, but many people walk through the world unaware of the redlining, zoning, and gentrifying that allowed that bus stop or coffee shop to be there in the first place.&lt;br /&gt;
+Take a second today and try to learn the history about just one city block around you. What was here 25 years ago? 50? 100?&lt;/p&gt;
+</description>
+        <pubDate>Fri, 27 Aug 2021 11:00:00 +0000</pubDate>
+        <link>/portfolio//articles/21/Snapchat-Filters</link>
+        <guid isPermaLink="true">/portfolio//articles/21/Snapchat-Filters</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+      <item>
+        <title>This Used to be a Synagogue Bot</title>
+        <description>&lt;p&gt;This is (for now) the final installment in my synagogue data analysis. Using the data I gathered, I constructed a Twitter Bot using Twitter and Google APIs. This bot posts Google Streetview images of the places where synagogues and Jewish organizations used to be located.&lt;br /&gt;
+Find the bot &lt;a href=&quot;https://twitter.com/OldShulSpots&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;construction&quot;&gt;Construction&lt;/h2&gt;
+
+&lt;p&gt;This bot is based on the &lt;a href=&quot;https://github.com/fitnr/everylotbot&quot;&gt;everylotbot developed by Neil Freeman&lt;/a&gt;. Initially, I geocoded the recorded addresses with &lt;a href=&quot;https://pypi.org/project/geopy/&quot;&gt;geopy&lt;/a&gt;. Then, I used &lt;a href=&quot;https://www.sqlalchemy.org/&quot;&gt;SQL Alchemy&lt;/a&gt; to convert my .csv to an SQL database.&lt;br /&gt;
+To create the bot, I created a Twitter developer account and got my project approved. I needed the Twitter API key to automate tweeting. I also needed a fresh, new Twitter account to post on.&lt;br /&gt;
+I also needed a Google Streetview API. I created a developer account. This API takes the streetview images for coordinates so I don’t have to manually gather these images.&lt;br /&gt;
+Then, I tested the bot!&lt;/p&gt;
+
+&lt;h2 id=&quot;okaybut-why&quot;&gt;Okay…but why?&lt;/h2&gt;
+&lt;p&gt;We’ve gotten through the technical stuff. I used a bunch of APIs and little Python packages to make my known addresses into tweets with pictures. But why?&lt;br /&gt;
+This project is an example of commemorative geography. It is one thing to see a list of 1,016 addresses and recognize that they are in New York. It is another thing to see the places where Jewish immigrants used to gather.
+People following this bot get regular reminders that New York City used to be…different. Different people lived and gathered there and had a different way of life. This bot encourages people to explore their own cities and wonder “What used to be here? Who gathered here?”&lt;br /&gt;
+This also encourages us to consider the city as an immigration destination. The way Jewish immigrants were geographically subjugated is the same way other immigrant groups are treated now.&lt;br /&gt;
+Finally, this bot lets us take a look at the sheer number of small organizations that used to make their homes in apartment buildings. Now, most people go to a synagogue to gather. In a different time, people held morning minyan in their neighbor’s cramped apartment. Judaism was
+less centralized. Of course, these geographically linked relgious communities still exist in New York. Crown Heights, Borough Park, and Williamsburg are famous for their Charedi/Chassidic communities. These communities are often still named for European locations (i.e. Lubavitch for Lyubavichi, Satmar for Satu Mare, and Bobov for Bobowa).&lt;br /&gt;
+What changed? It seems that for some, the more closely they follow Orthodox tenents, the more important they find a particular location. Is this perhaps a way of holding onto the past? A way of hoping for a similar future?&lt;/p&gt;
+
+&lt;h2 id=&quot;future-of-the-project&quot;&gt;Future of the project&lt;/h2&gt;
+&lt;p&gt;I hope to gain access to records for the other boroughs of New York, especially Brooklyn, so that I can perform similar analyses. Because Manhattan had such a centralized Jewish community, many people were keeping records. This doesn’t appear to be the case in Brooklyn until a later date.&lt;br /&gt;
+I also hope to do topic analysis for the names of synagogues in my current dataset. (This was actually the original intent of this project!) There may be nothing of significance in the names other than geographic indicators, though.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 12 Jul 2021 11:00:00 +0000</pubDate>
+        <link>/portfolio//articles/21/Twitter-Bot</link>
+        <guid isPermaLink="true">/portfolio//articles/21/Twitter-Bot</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+      <item>
+        <title>Displaying &amp; Interpreting Synagogue Data</title>
+        <description>&lt;p&gt;This is the second post about my synagogue data project. &lt;a href=&quot;2021-06-04-Cleaning-Data.md&quot;&gt;Here&lt;/a&gt; is the first post.  I am using 19th and 20th century synagogue records to learn about Jewish life in America. To interpret this data, I used the Matplotlib and Pandas Python package.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;dates-of-establishment&quot;&gt;Dates of Establishment&lt;/h2&gt;
+
+&lt;p&gt;Trimmed for outliers*, the distribution of organization dates looks like Figure 1. This is only for organizations for which the year of establishment is known. Many organizations did not have a recorded year of founding. 
+Of the 1,016 organizations that are in the dataset, the year of organization is known for 762 (see fig. 3). This can be attributed to insufficient record keeping or loss of such records.
+The mode is in 1892. This is the year when the most organizations were established. The median year of establishment is 1896. 
+Organizations that affiliated themselves with a particular location had the same distribution and median as those that did not have an affiliation.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/distribution.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 1&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is, of course, the data trimmed for outliers. Well, &lt;em&gt;outlier.&lt;/em&gt; Congregation Shearith Israel was established in 1654 by Dutch Sephardim.&lt;/p&gt;
+
+&lt;p&gt;Before 1885, no more than 8 organizations had been established in a year. Suddenly, in 1885, this number rose to 23 in a year. 
+The number of organizations established in a year would not consistently return to single digits until 1917. 
+(In 1908, only 8 organizations were established. However, this year was surrounded by larger numbers on both sides. This may be attributed to one of the primary source book being the 1907-08 Jewish Yearbook.
+Organizations established in late 1908 may not have made the cut.) 
+The literature on Jewish immigration to New York generally describes it as occurring in three waves, each larger than the last. 
+The first was a small wave of Dutch Sephardic immigrants (like those that established Congregation Shearith Israel).
+The next, occurring in the mid-nineteenth century was a wave of German Ashkenazi immigrants. 
+In “New York Jews and the Quest for Community,” published in 1922, Arthur Goren claims that in “the eleven years which preceded the outbreak of World War I, over 10,000 Jews arrived annually from Eastern Europe.”  &lt;label for=&quot;one&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;one&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Arthur A. Goren, New York Jews and the Quest for Community: the Kehillah Experiment, 1908-1922 (New York: Columbia University Press, 1970), 20. &lt;/span&gt;
+Russian Jews moved to New York in large numbers and comrpised a large part of the Lower East Side’s population. (You’ll not that the map in Figure 3 shows few people identified with places in modern Russia.
+However, many Eastern Europeans from the time are referred to as “Russian” because the Russian Empire did not fall until 1917. As explained in the first article, I noted the current nation where towns are located.)&lt;/p&gt;
+
+&lt;h2 id=&quot;locations-of-origin&quot;&gt;Locations of Origin&lt;/h2&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/table.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 2&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This table presents the nations that that organizations identified with. It also presents the number of organizations with a known year of founding and that identified as Orthodox.&lt;br /&gt;
+The nations are ordered from most to least frequent. Poland, Ukraine, and Belarus are the three most commonly identified nations. The national identification proportions are shown in figure 3.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/pie.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 3&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The actual towns are mapped in Figure 4. All of the organizations with an identification identified somewhere in Europe.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/euromap.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 4&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This map makes it evident that most organizations originated in Eastern Europe, and this makes sense given the number of 20th-century immigrants. 
+However, an absence here is more striking than a presence. &lt;br /&gt;
+Figures three and four show that there were only two organizations in all of Manhattan that identify themselves as German. 
+This contrasts greatly with current assumptions about German-Jewish immigrants.&lt;br /&gt;
+Where are all the Germans in Manhattan? There are two distinct possibilities. 
+First, it is possible that Germans did not live in Manhattan. They may set their sights beyond Manhattan and instead preferred other boroughs or suburbs. This may have been eventually true.
+However, there is evidence of German Jews living in Manhattan. There was a well-known community of German Jews living in Washington Heights, and German Jews are documented to have lived in the Lower East Side as early as 1848.&lt;/p&gt;
+
+&lt;p&gt;This is why I favor a second theory. Organizations were still established in the time that German Jews are purported to be moving to Manhattan. 
+These organizations simply didn’t identify themselves as German. Some may argue that this is because Germany did not exist at the time. This is true.
+However, when I note that these groups were “not identified as German,” I mean they were not identified with towns or cities now located in the modern state of Germany. 
+Others may argue that later German-Jewish immigrants may have been troubled by rising fascism and antisemitisim in Germany. This is also true.
+But why didn’t they identify with their towns and cities instead of their nation? And could this not also have been said of those living in the Russian Empire?&lt;/p&gt;
+
+&lt;p&gt;I theorize that when Germans came to the United States, they were more prepared to sever the ties from the towns they came from, likely because of the assimilationist Reform Movement’s prominence there.
+Their lack of location identifiers wasn’t about Germany. It was about America and their determination to make a new life there.&lt;/p&gt;
+
+&lt;p&gt;Ideally, I would be able to compare the total amount of German-originated organizations with the fraction that identified themselves as such. 
+Because this dataset is all that remains, this endeavor would be fruitless. 
+One could compare the naming practices of Eastern and Central European groups in order to determine which unnamed organizations fall into which category. 
+However, the sample size for Central European groups is so small that this is impossible. The sample size is small because the Central Europeans did not identify as such, which is what created this question in the first place.
+To answer these questions about local and national identity, we have to look at how groups organized and located themselves once in the United States.&lt;/p&gt;
+
+&lt;h2 id=&quot;locations-in-new-york&quot;&gt;Locations in New York&lt;/h2&gt;
+
+&lt;p&gt;Lets look at the geographic progression of establishment.
+These are only for the organizations for which the year is known, but there is not likely a meaningful difference between organizations for which the year is unknown.&lt;/p&gt;
+
+&lt;p&gt;Figure 5 shows the locations of all of the synagogues established before 1850. At this point, the organizations seem to be fairly dispersed around Manhattan. However, there are already two groupings in the Upper and Lower East Sides.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/1850.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 5&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Figure 6 is a snapshot of all organizations established by 1885, including those established before 1850. At this point in time, the largest cluster is in the Lower East side. One organization has been established across the Williamsburg bridge, and there are a few in Harlem.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/1885.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 6&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;By 1900, there are so many Jewish organizations in the Lower East side that they become difficult to distinguish on a small map (Figure 7). Now, there are organizations as far north as Washington Heights. It is not totally clear whether the geographic scope of the records or of the actual organizations increased.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/1900.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 7&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;In the next decade, the Heights, Harlem, and Upper East Side neighborhoods quickly grew. Growth in the Upper East Side could be attributed to the economic success of many Jewish Americans. Conversely, growth in the Heights &amp;amp; Harlem might be attributed to the relocation of factories and industry to this less expensive area.
+The Lower East Side was also a huge industry hub (especially for textiles). Jewish immigrants were not alone in the Lower East Side. Many immigrants of different ethnic and religious backgrounds lived in this area.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/all.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 8&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Figure 8 is the map of every synagogue established up until about 1939. The Upper and Lower East sides have the largest clusters. The east side of Manhattan has the majority of all organizations from this time.
+Note that when organizations were located outside of the east side, they tended to crop up in pairs. This could be because they shared resources. Running a formal synagogue was very expensive because of all the necessary matierals (sefer torah, siddurim, etc.). Therefore, congregations could have shared these items. This sharing presents the second reason for closeness: orthodoxy. Orthodox Jews may not carry things between different domains or use electricity on Shabbos (the sabbath), so congregants must live close to one another and their place of worship. 
+A higher concentration of Orthodox Jews among these smaller communities would explain these split-off neighborhoods. It could be that organizations only rented in less expensive areas, so the price was a draw for both groups.&lt;/p&gt;
+
+&lt;p&gt;I hypothesized that these pairings could be based upon country of origin. While some countries dominate the proportions (Figure 3), maybe Jews from countries that did not have existing social support in the United States established their synagogues and organizations away from the main Jewish structure.
+Polish, Ukranian, and Belarussian Jews had large support systems because they had many peers that spoke the same language or dialect. Other, smaller groups may not have had this social infrastructure. Polish immigrants would have moved close to the Polish support center (Figure 9). But, say, Greek immigrants wouldn’t have gotten the same support in those Polish areas. Therefore, it made no difference to them where they lived.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/polish.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 9&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/greek.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 10&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;This generalization isn’t necessarily supported by Figure 10. Greek-Jewish immigrants did live close together, but not necessarily far from everyone else.&lt;br /&gt;
+There are other problems with these generalizations. First, the language barrier was not as insurmountable as you might think. Many Eastern European/Russian Jewish immigrants spoke Yiddish. Though there were (and still are today) dialect rivalries, many Jewish immigrants could speak to one another. Compared to Americans and other immigrants, Jewish immigrants had much more in common with one another. (There are several exceptions to this rule, namely that many Sephardim did not speak Yiddish but Ladino or another language common in their place of origin.)&lt;br /&gt;
+The second problem with this belief is that many of these nations did not exist. The Russian empire was still strong, and modern borders had not been settled. It is therefore unlikely that these immigrants had some kind of cohesive national identity. This is an anarchronistic interpretation. Lastly, even if these nations did exist in their modern forms, it is unlikely that ostracized Jewish immigrants would align with them in any capacity.&lt;br /&gt;
+So, there was no nationalism. Then how did people group?&lt;br /&gt;
+The answer might be in their localities.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/minsk.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 11&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Look at the locations of these Minsk-identified organizations. They are (save an Upper East Side outlier) close together. We see this again with Przemysl, Poland (Figure 12) and Rymanow, Poland (Figure 13).&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/przemysl.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 12&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure&gt;&lt;img src=&quot;/portfolio//assets/img/rymanow.png&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;Figure 13&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;These are the only towns with enough organizations (4+) to look at their grouping patterns. But we can see that people that identified with one city or town remained close together. This seems very natural. Immigrating to a new country is difficult, so familiar accents, practices, and faces can be a great comfort.&lt;br /&gt;
+But in this local-identification, we find the answer to our earlier question.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-didnt-german-jews-identify-with-germany&quot;&gt;Why didn’t German Jews identify with Germany?&lt;/h2&gt;
+&lt;p&gt;We’ve already established that there was no modern Germany and that German Jews didn’t even identify with their towns. We have also discussed the Reform movement’s value of assimilation.&lt;br /&gt;
+But the Reform movement is much more than this. Unlike Orthodoxy, the Reform movement’s observance does not limit the carrying of objects of Shabbos. Observers can also use electricity and transportation on holy days. This decreases the need for tightly packed Jewish communities.
+Just before the war, nearly 60% of German Jews lived in “urban areas with more than 100,000 inhabitants.” &lt;label for=&quot;two&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;two&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;See &lt;a href=&quot;https://encyclopedia.ushmm.org/content/en/article/jewish-communities-of-prewar-germany&quot;&gt;United States Holocaust Memorial Museum, “German Jewish Life.”&lt;/a&gt; &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Unlike Russian Jews, many Germans lived in cities. By the mid-nineteenth century (when most German Jewish immigrants came to the United States), “cultural isolation was almost completely gone.” Liberalizing forces granted German Jews social and geographic mobility. These forces, however, were exclusive to Western Europe.
+&lt;label for=&quot;three&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;three&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Jacob Katz,  Out of the Ghetto : The Social Background of Jewish Emancipation (Syracuse, N.Y.: Syracuse University Press), 214. &lt;/span&gt; Meanwhile, many Polish and Russian Jews lived in small towns. If they lived in cities, they likely lived in a Jewish quarter or neighborhood.&lt;br /&gt;
+What does this mean for New York neighborhoods? It means that German Jews didn’t establish German Jewish communities because there were not as many communities to translate. There were, of course, synagogues. However, religion was just religion. There was no drive to live near fellow congregants because they did not necessarily provide the comforts of home.
+It appears that the more assimilated you are, the &lt;strong&gt;less&lt;/strong&gt; you care about the nation.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Economic mobility and assimilation into Protestant society decreased German Jews affiliations with their hometowns. This is not a new idea. In the past, many people lived in towns where their families had been for generations. In the industrialized world, this is no longer possible. How many of us have severed ties with homelands because of economic conditions? But Russian Jews, who had been dependent on the safety of tight-knit neighborhoods, mirrored their old conditions in a new land.
+These organizations are a strong proxy for immigration trends. However, there are some limitations. Obviously, we can only know what was recorded in the records. The Jewish Year Books are not infalliable. Additionally, it’s not clear what “organization” means to the record keepers. It’s possible (though extremely unlikely) that there were not more Russian immigrants. Perhaps they just created smaller organizations.
+However, as the data is, it accurately reflects the rate of Jewish immigration to the United States.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 30 Jun 2021 02:16:25 +0000</pubDate>
+        <link>/portfolio//articles/21/Displaying-Data</link>
+        <guid isPermaLink="true">/portfolio//articles/21/Displaying-Data</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+      <item>
+        <title>Cleaning &amp; Clarifying Synagogue Data</title>
+        <description>&lt;p&gt;I used data compiled from the 1900-1 &amp;amp; 1907-8 Jewish Yearbooks and the 1939 WPA Survey of Manhattan, New York to map and understand Jewish organizations in the borough.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;reasoning-and-assumptions&quot;&gt;Reasoning and Assumptions&lt;/h2&gt;
+
+&lt;p&gt;The purpose of this study is to discern historical trends from organization naming patterns. Many of these organizations are synagoges, but others are minyanim, charity societies, or unions.
+While I may eventually expand the study beyond Manhattan, I believe this is a fairly representative sample for a few reasons.
+First, there are 1,016 Jewish organizations in this data. Their dates of founding range from 1654 to 1939, so the data is capable of showing change of historical change.
+I used New York City instead of the United States for two reasons. First, because New York had such a large Jewish community, there were social structures in place that kept track of organizations (like the Jewish Yearbook). 
+These social structures kept records because there were so many Jewish organizations that it became necessary to keep a record of them for potential congregants. 
+I used this data because it is the data that exists. Secondly, I am using New York because a more concentrated Jewish population means that organizations must diversify their names. 
+While many may have originally opted for traditional names (Beth Israel etc.), they needed to distinguish themselves from neighboring organizations. 
+It would not be helpful to look at national naming practices because sparsely populated Jewish organizations did not require unique names. 
+Even if a clear national dataset did exist, it would not help answer my questions.&lt;/p&gt;
+
+&lt;h3 id=&quot;duplicates&quot;&gt;Duplicates&lt;/h3&gt;
+
+&lt;p&gt;I am measuring a few things from the data. Most importantly, I am recording the names of the organizations. 
+Frequently, there were repeat names in the dataset. If the &lt;a href=&quot;https://genealogy.cjh.org/synagogue-map-resources&quot;&gt;Ackman notes&lt;/a&gt; suspected a duplicate, I removed the suspected repeat. 
+Even if the notes did not notice this, if I found two congregations with similar years of establishment and names, I often removed one.
+If the congregations were located on the same street, I assumed they were duplicates.
+Even if two names were very similar and had the same year of organization, I kept both organizations if they were geographically distant. 
+This is because several organizations identified themselves as being a branch of another organization.&lt;/p&gt;
+
+&lt;h3 id=&quot;name-errors&quot;&gt;Name Errors&lt;/h3&gt;
+
+&lt;p&gt;Many names included words that appeared to be misspellings of common Hebrew words. I did &lt;strong&gt;not&lt;/strong&gt; correct these spellings. I think they display the variety of transliteration common in the time period.
+Additionally, it is interesting to see how different groups used different transliterations based on their linguistic backgrounds.&lt;/p&gt;
+
+&lt;p&gt;If there was a clear misspelling of an English word, I took the liberty of correcting it, blaming it on the Works Progress enumerator or bad printing technology.&lt;/p&gt;
+
+&lt;h3 id=&quot;name-topics&quot;&gt;Name topics&lt;/h3&gt;
+
+&lt;p&gt;I created three topics within the organization names. The categories are: names, adjectives, religious indicators, and organizational indicators,
+Obviously, these are not clean or separate areas. “Names” refers to proper names, usually those from the Hebrew Bible or Rabbinic history. “Adjectives” refers to Hebrew or Yiddish words in the name
+that could describe a congregation. We face one issue already: many of these adjectives work as normal Yiddish names. For example, “Sholem” means peace, and “Klein” means small, but
+“Sholem Klein” could be your next-door neighbor. This is an issue for some religious indicators as well. “Relgious indicators” refers strictly to religious nouns. These refer to prayer,
+ritual immersion, and religious texts/places. Again, there is not a perfect distinction. “Organizational indicators” refers to words that could explain the type of organization. 
+The vast majority of names are mostly in Hebrew. Organizational indicators are the exception because they are often English words (e.g., society, synagogue, association).&lt;/p&gt;
+
+&lt;p&gt;Were later synagogues more likely to use religious inicators? Were earlier synagogues more likely to invoke known Biblical figures? These are not clean-cut topics. However, they may be able
+to give insight into trends of immigration and assimilation.&lt;/p&gt;
+
+&lt;h3 id=&quot;year&quot;&gt;Year&lt;/h3&gt;
+
+&lt;p&gt;I recorded the date that these organizations were founded. I based the ‘year’ included in my data on the year of organization instead of the year of establishment when both were included. 
+My rationale for this is that the name of the congregation was likely decided upon before property was acquired. 
+This date is crucial to the project because it allows for distinctions to be made over time.&lt;/p&gt;
+
+&lt;h3 id=&quot;location-association&quot;&gt;Location Association&lt;/h3&gt;
+
+&lt;p&gt;Many synagogues and organizations referenced a European location in their names. This may indicate place of emigration or ideological association.
+To date, many Chassidic groups identify themselves with European places they are not from because that is where their ancestors or Rebbe’s ancestors were from (Satmar, Bobov, etc.).
+I decided, however, that an association with a rabbi indicated a willingness to be associated with the town from which the rabbi originated. 
+In cases where there was no noted location and several locations could be assumed from the name, I did not make this assumption myself.
+This occured several times because Yiddish names for Eastern European towns are often different from their Polish/Ukranian/Russian names, which are different from the standardized names.&lt;/p&gt;
+
+&lt;p&gt;Some groups simply aligned themselves with a nation-state or region. In these cases, I allowed the mapping software (MatplotLib) to place this near the capital.&lt;/p&gt;
+
+&lt;p&gt;I labeled organizations with the country where their village or town is now located. While anachronistic, this is more helpful in mapping and interpreting the data in a meaningful way. 
+I also recorded the location of each synagogue in New York. This way, I can map immigration/location associated by neighborhood. 
+Fortunately, this data was standardized–save two streets, every location still existed.&lt;/p&gt;
+
+&lt;h3 id=&quot;movement&quot;&gt;Movement&lt;/h3&gt;
+
+&lt;p&gt;To track trends among different ideological groups, I tracked both minhag (cultural group) and denomination.
+I only noted the denomination if the movement was stated in the record in the Jewish Yearbook. 
+Even if something like “Chasidim” was in the name, I did not mark the organization as Chassidic or Orthodox. 
+I did not want to impose an anachronistic view of Judaic movements onto these names.&lt;/p&gt;
+
+&lt;h3 id=&quot;minhag&quot;&gt;Minhag&lt;/h3&gt;
+
+&lt;p&gt;I assumed that most organizations followed the Ashkenazic minhag unless one of two things was recorded in the data. 
+First, I recorded an organization as Sephardic if the Ackman notes or Jewish Yearbook specified that the congregation is Sephardic. 
+I also recorded a group as Sephardic if the name of the congregation has some form of the word Sephardic in it (S’fard, S’phardim, etc).&lt;/p&gt;
+
+&lt;p&gt;I avoided making extrapolations based upon location because there were many Sephardim living in Eastern Europe as a result of numerous inquisitions.&lt;/p&gt;
+
+&lt;p&gt;I regret that my assumptions are inherently Ashkenormative—that is, focused primarily upon Ashkenazi communities. 
+However, because Sephardic communities were less common, it can be assumed that Sephardic organizations would be
+more likely to identify themselves as such in their name to welcome other Sephardim.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 04 Jun 2021 09:06:05 +0000</pubDate>
+        <link>/portfolio//articles/21/Cleaning-Data</link>
+        <guid isPermaLink="true">/portfolio//articles/21/Cleaning-Data</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
   </channel>
 </rss>

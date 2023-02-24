@@ -1,1 +1,1 @@
-This is my GitHub Pages site. It uses Jekyll.
+This is for my GH-Pages site.
